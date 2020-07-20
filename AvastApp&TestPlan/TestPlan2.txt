@@ -1,0 +1,165 @@
+Software Test Plan (STP) for X-VPN
+
+Date	Description	Version		QA Members
+7/18	Revised		2.0		Ellen, Niel, Tom
+
+1 INTRODUCTION
+
+The purpose of this STP is to develop a test plan to assess all functionalities of a VPN app named X-VPN on Android.
+
+2 TEST PLAN
+
+2.1 Items Under Test
+The app will consist of three basic area of testing. The first item of testing is whether a user can sign in or sign up. The second item accessed is whether a user can select a preferred location/server. The third item under test is whether the app's performance is as expected.
+
+2.2 Scope
+The scope of this document is to test X-VPN by each component, component integration, and full system functionality. However, due to the lack of available project time, this document will only include functional testing.
+
+2.3 Test Devices and Environments 
+Pixel 3 with Android version 6.0
+Nexus 6 with Android version 10.0
+
+2.4 Resource Materials
+X-VPN Software Configuration Management Plan
+X-VPN Software Requirements Specification 
+X-VPN Software Quality Assurance Plan  
+X-VPN Software Design document   
+
+2.5 Test Categories
+
+2.5.1 Unit Testing
+This process involves the testing of particular system components. These components are isolated from other portions. 
+
+2.5.2 Integration Testing
+Integration testing procedures incorporate system components and how they perform together functionally between one another.
+
+2.5.3 System Testing
+This involves the complete integration of all system components and how they perform as a whole unit. 
+
+2.5.4 Performance Testing 
+The test checks if the app's performance meets business needs. It includes connection speed, download speed, network coverage, etc.
+
+2.6 Acronyms
+CI = Configuration item
+SCMP = Software Configuration Management Plan
+SPMP = Software Project Management Plan
+SRS = Software Requirements Specification
+SDD = Software Design Document
+STP = Software Test Plan
+
+3 TEST DESIGN
+
+3.1 Functional Testing Part
+
+3.1.1 New user can sign up
+New user opens X-VPN, signs up with an email and password
+
+3.1.2 User can sign in
+User opens X-VPN, signs in with an email and password
+
+3.1.3 User can sign out
+User signs in and then signs out
+
+3.1.4 User can subscribe a premium plan
+User signs in and subscribes a premium plan
+
+3.1.5 Premium user can select a location
+User signs in and selects a location in the location list
+
+3.1.6 Premium user can select the fastest server
+User signs in and selects the fastest server shown
+
+4 RISKS
+
+4.1 Team members lack the required skill for testing a VPN app (plan training courses)
+
+4.2 Wrong budget estimate and cost overruns (pay attention to project planning and constantly track and measure the progress)
+
+5 TEST CASES
+
+5.1 New user can sign up (High Priority)
+Given a user opens X-VPN
+When he clicks Sign Up
+And enters an email 
+And enters a password
+And clicks Create Account
+Then his account is signed in 
+
+5.2 User can sign in with a registered account (High Priority)
+Given a user opens X-VPN
+When he clicks Sign In
+And enters a correct email 
+And enters a correct password
+And clicks Sign In
+Then his account is signed in  
+
+5.3 User cannot sign in with an unregistered account (High Priority)
+Given a user opens X-VPN
+When he clicks Sign In
+And enters a incorrect email 
+And enters a password
+And clicks Sign In
+Then his account is not signed in  
+
+5.4 User cannot sign in with a wrong password (High Priority)
+Given a user opens X-VPN
+When he clicks Sign In
+And enters a correct email 
+And enters a incorrect password
+And clicks Sign In
+Then his account is not signed in  
+
+5.5 User can sign out (Medium Priority)
+Given a user opens X-VPN
+When he clicks Sign In
+And enters a correct email 
+And enters a correct password
+And clicks Sign In
+And clicks Sign Out
+Then his account is signed out 
+
+5.6 User can subcribe a premium plan (High Priority)
+Given a user opens X-VPN
+And signs in X-VPN
+When he clicks Go Premium
+And enters a correct email 
+And selects a payment method
+And clicks Proceed to secure check out
+And fills out payment information
+Then his account becomes premium  
+
+5.7 User can select a location (High Priority)
+Given a user opens X-VPN
+And signs in X-VPN
+And clicks Select Location
+When he selects a location 
+And connects
+Then his account is connected to the corresponding server 
+
+5.8 User can select the fastest server (High Priority)
+Given a user opens X-VPN
+And signs in X-VPN
+And clicks Select Location
+When he clicks the Fastest Server 
+And connects
+Then his account is connected to the fastest server 
+
+5.9 User can reset the password (Medium Priority)
+Given a user opens X-VPN
+When he clicks Sign In
+And clicks Forgot
+And enters the correct email
+And enters the verification code
+Then he can reset the password 
+
+6 QA TEST SCHEDULE
+6.1 Test case 1 will be tested by Ellen in week 3
+6.2 Test case 2 will be tested by Ellen in week 3
+6.3 Test case 3 will be tested by Ellen in week 3
+6.4 Test case 4 will be tested by Ellen in week 3
+6.5 Test case 5 will be tested by Niel in week 3
+6.6 Test case 6 will be tested by Niel in week 3
+6.7 Test case 7 will be tested by Niel in week 3
+6.8 Test case 8 will be tested by Niel in week 3
+6.9 Test case 9 will be tested by Tom in week 3
+6.10 Performance testing will be done by Tom in week 3

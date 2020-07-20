@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AvastApp</string>
+    <string name="hello_first_fragment">Hello!</string>
+    <string name="first_button">Get Articles</string>
+</resources>
